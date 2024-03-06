@@ -16,4 +16,4 @@
 
 
 ## Завдання_3:
-![image](https://github.com/0Sannya0/Practyka_OOP/assets/121272072/56ad7e11-2e0d-4d4f-94ca-dd3a09476586)
+
