@@ -29,3 +29,4 @@ class TextResultFactory implements ResultFactory {
         return new TextResultDisplayer();
     }
 }
+
