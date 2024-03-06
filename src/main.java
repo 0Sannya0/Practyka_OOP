@@ -5,6 +5,9 @@ public class main {
     public static void Main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
+
+
+        
         System.out.println("Enter the value of alpha: ");
         double alpha = scanner.nextDouble();
 
