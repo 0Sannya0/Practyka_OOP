@@ -26,7 +26,6 @@ public class main {
         ResultDisplayer resultDisplayer = resultFactory.createResultDisplayer();
         // Відображення результатів
         resultDisplayer.displayResult(resultCollection.getResults());
-
         scanner.close();
     }
 }
