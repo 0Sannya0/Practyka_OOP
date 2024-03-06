@@ -1,4 +1,8 @@
 # Практика ООП
+
+
+## Завдання_2:
+
 ### main.java:
 ![Screenshot_100](https://github.com/0Sannya0/Practyka_OOP/assets/121272072/722b5885-9b52-400c-8cc0-30ce56698e43)
 ### ObjectStateDemo.java:
@@ -11,3 +15,4 @@
 ![Screenshot_105](https://github.com/0Sannya0/Practyka_OOP/assets/121272072/644dfcad-3d8f-487b-960b-6e567012d3c2)
 
 
+## Завдання_3:
