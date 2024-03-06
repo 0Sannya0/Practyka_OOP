@@ -1,4 +1,6 @@
 import java.util.Scanner;
+import java.util.List;
+import java.util.ArrayList;
 
 public class main {
     @SuppressWarnings("static-access")
@@ -7,7 +9,7 @@ public class main {
 
 
 
-        
+
         System.out.println("Enter the value of alpha: ");
         double alpha = scanner.nextDouble();
 
@@ -28,3 +30,18 @@ public class main {
 }
 
 
+class CalculationResultCollection {
+    private List<Integer> results;
+
+    public CalculationResultCollection() {
+        results = new ArrayList<>();
+    }
+
+    public void addResult(int result) {
+        results.add(result);
+    }
+
+    public List<Integer> getResults() {
+        return results;
+    }
+}
