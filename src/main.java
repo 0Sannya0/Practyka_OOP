@@ -1,68 +1,50 @@
 import java.util.Scanner;
 import java.util.List;
 import java.util.ArrayList;
+
 public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        System.out.println("Enter the value of alpha: ");
-        double alpha = scanner.nextDouble();
+        List<Integer> results = new ArrayList<>();
+        
 
-        ParametersResult parametersResult = new ParametersResult();
-        parametersResult.setAlpha(alpha);
-        parametersResult.setMaxSequenceLength(10);
+        while (true) {
+            System.out.println("1. Calculate max sequence length");
+            System.out.println("2. Display calculation history");
+            System.out.println("3. Exit");
+            System.out.println("Enter your choice:");
 
-        SolutionFinder solutionFinder = new SolutionFinder(parametersResult);
-        int maxSequenceLength = solutionFinder.calculateMaxSequenceLength();
+            int choice = scanner.nextInt();
+            switch (choice) {
+                case 1:
+                    System.out.println("Enter the value of alpha: ");
+                    double alpha = scanner.nextDouble();
 
-        CalculationResultCollection resultCollection = new CalculationResultCollection();
-        resultCollection.addResult(maxSequenceLength);
+                    ParametersResult parametersResult = new ParametersResult();
+                    parametersResult.setAlpha(alpha);
+                    parametersResult.setMaxSequenceLength(10);
 
-        ResultFactory resultFactory = getResultFactory(); // Виклик методу getResultFactory()
-        ResultDisplayer resultDisplayer = resultFactory.createResultDisplayer();
-        resultDisplayer.displayResult(resultCollection.getResults());
-        scanner.close();
-    }
+                    SolutionFinder solutionFinder = new SolutionFinder(parametersResult);
+                    int maxSequenceLength = solutionFinder.calculateMaxSequenceLength();
 
-    // Метод для динамічного вибору фабрики результатів
-    private static ResultFactory getResultFactory() {
-        return new TextTableResultFactory(); 
-}
-}
-// Клас для зберігання результатів обчислень
-class CalculationResultCollection {
-    private List<Integer> results;
-    // Конструктор класу
-    public CalculationResultCollection() {
-        results = new ArrayList<>();
-    }
-    // Метод для додавання результату обчислення
-    public void addResult(int result) {
-        results.add(result);
-    }
-    // Метод для отримання результатів
-    public List<Integer> getResults() {
-        return results;
-    }
-}
-// Клас для представлення результатів як текстової таблиці
-class TextTableResultDisplayer extends ResultDisplayer {
-    @Override
-    public void displayResult(List<Integer> results) {
-        System.out.println("Table display of results:");
-        System.out.println("----------------------------");
-        System.out.println("| Index | Max Sequence Length |");
-        System.out.println("----------------------------");
-        for (int i = 0; i < results.size(); i++) {
-            System.out.printf("| %-5d | %-19d |\n", i, results.get(i));
+                    results.add(maxSequenceLength);
+
+                    System.out.println("Max sequence length: " + maxSequenceLength);
+                    break;
+                case 2:
+                    System.out.println("Calculation history:");
+                    for (int i = 0; i < results.size(); i++) {
+                        System.out.println("Calculation " + (i + 1) + ": " + results.get(i));
+                    }
+                    break;
+                case 3:
+                    System.out.println("Exiting...");
+                    scanner.close();
+                    System.exit(0);
+                default:
+                    System.out.println("Invalid choice. Please enter again.");
+            }
         }
-        System.out.println("----------------------------");
-    }
-}
-// Фабрика для створення відображувача результатів у вигляді текстової таблиці
-class TextTableResultFactory implements ResultFactory {
-    @Override
-    public ResultDisplayer createResultDisplayer() {
-        return new TextTableResultDisplayer();
     }
 }
