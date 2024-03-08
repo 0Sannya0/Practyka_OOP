@@ -8,14 +8,17 @@ public class AddCommand implements Command {
         this.collection = collection;
         this.element = element;
     }
-
     @Override
-    public void execute() {
+    public void execute(int element) {
         collection.add(element);
     }
 
     @Override
     public void undo() {
         collection.remove(collection.size() - 1);
+    }
+    @Override
+    public int getElement() {
+        return element;
     }
 }
