@@ -77,3 +77,21 @@
 
 ### AddCommand.java:
 ![Screenshot_124](https://github.com/0Sannya0/Practyka_OOP/assets/121272072/35729149-0b5e-4a0a-8135-f65237f41a81)
+
+## Завдання 6:
+
+### main.java:
+![Screenshot_126](https://github.com/0Sannya0/Practyka_OOP/assets/121272072/ef4c822b-e9ab-4f55-8151-4bd857f0961a)
+
+### Command.java:
+![Screenshot_127](https://github.com/0Sannya0/Practyka_OOP/assets/121272072/60a9e5f4-bd42-4638-a933-1711e3dc5af1)
+
+### AddCommand.java:
+![Screenshot_128](https://github.com/0Sannya0/Practyka_OOP/assets/121272072/a94e13b8-ae4d-4f24-8f0f-e55398335264)
+
+### ParallelProcessor.java:
+![Screenshot_129](https://github.com/0Sannya0/Practyka_OOP/assets/121272072/5e7b4083-ad51-4dcb-9b1e-30aafb7d40e0)
+
+### WorkerThread.java:
+![Screenshot_130](https://github.com/0Sannya0/Practyka_OOP/assets/121272072/08a366cb-dc92-4ca4-bb5d-747db42cc898)
+
