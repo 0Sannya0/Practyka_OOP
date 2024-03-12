@@ -3,7 +3,7 @@ import java.util.List;
 
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
-
+// Основний клас програми
 public class Main {
     private static final ExecutorService executor = Executors.newFixedThreadPool(Runtime.getRuntime().availableProcessors());
     private static final CalculationResultCollection resultCollection = new CalculationResultCollection();
@@ -11,7 +11,7 @@ public class Main {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-
+        // Головний цикл вибору опцій
         while (true) {
             System.out.println("1. Calculate max sequence length");
             System.out.println("2. Display calculation history");
@@ -31,6 +31,7 @@ public class Main {
                     processCollectionInParallel();
                     break;
                 case 4:
+                    // Вихід з програми
                     System.out.println("Exiting...");
                     shutdownExecutor();
                     scanner.close();
@@ -40,7 +41,7 @@ public class Main {
             }
         }
     }
-
+    // Обчислення максимальної довжини послідовності 1
     private static void calculateMaxSequenceLength(Scanner scanner) {
         System.out.println("Enter the value of alpha: ");
         double alpha = scanner.nextDouble();
@@ -55,7 +56,7 @@ public class Main {
         resultCollection.addResult(maxSequenceLength);
         menu.addResult(maxSequenceLength);
     }
-
+    // Виведення історії обчислень
     private static void displayHistory() {
         List<Integer> results = menu.getResults();
         System.out.println("Table display of results:");
