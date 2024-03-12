@@ -1,3 +1,4 @@
+// Клас для зберігання параметрів та результатів обчислень
 class ParametersResult {
     private double alpha;
     private int maxSequenceLength;
