@@ -1,5 +1,5 @@
 import java.io.*;
-
+// Демонстрація серіалізації та десеріалізації об'єктів
 public class ObjectStateDemo {
     public static void main(String[] args) {
         ParametersResult obj = new ParametersResult();
